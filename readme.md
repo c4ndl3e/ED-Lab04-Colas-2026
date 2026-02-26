@@ -17,7 +17,7 @@
 - [Ejercicio 2: Añadir un contador de elementos a la cola](#ejercicio-2-a%C3%B1adir-un-contador-de-elementos-a-la-cola)
 - [Ejercicio 3: Imprimir la cola en orden inverso](#ejercicio-3-imprimir-la-cola-en-orden-inverso)
 - [Ejercicio 4: Sumar dos colas](#ejercicio-4-sumar-dos-colas)
-- [Ejercicio 5: Resolver ejercicios básicos basados en recorrer la cola](#ejercicio-5-resolver-ejercicios-b%C3%A1sicos-basados-en-recorrer-la-cola)
+- [Ejercicio 5: Ejercicios basados en recorrer la cola](#ejercicio-5-ejercicios-basados-en-recorrer-la-cola)
 - [Ejercicio 6: Eliminar elementos de la cola si se cumple una condición](#ejercicio-6-eliminar-elementos-de-la-cola-si-se-cumple-una-condici%C3%B3n)
 - [Ejercicio 7: Resolución de un problema con colas con tamaño dinámico](#ejercicio-7-resoluci%C3%B3n-de-un-problema-con-colas-con-tama%C3%B1o-din%C3%A1mico)
 - [Ejercicio 8: Resolución de un problema con colas con tamaño fijo por medio de un array circular](#ejercicio-8-resoluci%C3%B3n-de-un-problema-con-colas-con-tama%C3%B1o-fijo-por-medio-de-un-array-circular)
@@ -90,11 +90,11 @@ En este ejercicio, trabajaremos con operaciones básicas de colas. Para realizar
 ## Ejercicio 1.1: Revisa la implementación de la cola
 Abre el archivo `uColaInteger.pas` y repasa la implementación de la cola. ¿Cuál es el tipo de los elementos que se almacenan en la cola? ¿Qué operaciones básicas se pueden realizar con la cola?
 
-## Ejercicio 1.2: Crear una cola, añadir elementos y mostrar la cola
+## Ejercicio 1.2: Crear una cola, añadir elementos y mostrar sus elementos
 Abre el archivo `cola_ej1.pas` y completa el programa para que realice las siguientes acciones:
 1. Crear una cola.
 2. Añadir los elementos 1, 2, 3, 4 y 5 a la cola.
-3. Mostrar los elementos de la cola.
+3. Mostrar todos los elementos de la cola.
 
 El programa deberá mostrar los elementos de la cola en el siguiente formato:
 
@@ -152,7 +152,6 @@ La cola está vacía
 La cola no está vacía
 ```
 
-
 # Ejercicio 2: Añadir un contador de elementos a la cola
 
 En este ejercicio, trabajaremos con la definición de la cola. Para realizar este ejercicio se proporcionan los siguientes ficheros:
@@ -160,7 +159,7 @@ En este ejercicio, trabajaremos con la definición de la cola. Para realizar est
 - `uColaIntegerMod.pas`
 - `cola_ej2.pas`
 
-El fichero `uColaIntegerMod.pas` es identico al fichero `uColaInteger.pas` del ejercicio anterior, pero con un nombre diferente. Se proporciona para que puedas trabajar en paralelo con ambos ejercicios y comparar las soluciones.
+El fichero `uColaIntegerMod.pas` es identico al fichero `uColaInteger.pas` del ejercicio anterior, pero con un nombre diferente. Se proporciona así para que puedas trabajar en paralelo con ambos ejercicios y comparar las soluciones.
 
 El objetivo de este ejercicio es optimizar la función `num_elems` para que devuelva el número de elementos de la cola en tiempo constante (O(1)). Para ello, deberás añadir un contador de elementos a la cola.
 
@@ -210,13 +209,14 @@ En este ejercicio trabajaremos con operaciones básicas de colas. Para este ejer
 - `cola_ej3.pas`
 
 Se pide imprimir los elementos de la cola en orden inverso. Para ello, deberás implementar un subprograma que reciba una cola y muestre los elementos de la cola en orden inverso. 
-No se permite modificar la unidadd de la cola: unicamente se pueden usar las operaciones básicas de la cola. 
 
-Consejo: utilizando una pila puede que te resulte más sencillo resolver el problema: tienes a tu disposición la unidad `uPilaInteger.pas` en esta misma carpeta.
+No se permite modificar la unidad de la cola: unicamente se pueden usar las operaciones básicas de la cola. 
+
+Consejo: utilizando una pila puede que te resulte más sencillo resolver el problema. Recuerda que tienes a tu disposición la unidad `uPilaInteger.pas` en esta misma carpeta.
 
 ## Condiciones
 
-- La cola debe mantener su contenido y orden original.
+- La cola debe mantener su contenido y sus elementos el orden original.
 - Complejidad de tiempo esperada: O(n)
 - Complejidad de espacio auxiliar esperada:
     - O(1): ¡Increíble! No se necesita espacio adicional para resolver este problema.
@@ -251,7 +251,7 @@ Desarrollar un subprograma que reciba dos colas de enteros (con el mismo número
 - Dos colas de enteros. Las colas deben quedar en el mismo estado cuando el programa finalice.
 
 ## Salida: 
-- Una cola de enteros con la suma de los elementos de las colas originales
+- Una nueva cola de enteros con la suma de los elementos de las colas originales
 
 ## Ejemplos: 
 - (cola1: [1, 2, 3], cola2: [4, 5, 6]) => [5, 7, 9]
@@ -261,7 +261,7 @@ Desarrollar un subprograma que reciba dos colas de enteros (con el mismo número
 
 ### Descripción
 
-Desarrollar un subprograma que reciba dos colas de enteros y devuelva una nueva cola con la suma de los elementos de las colas originales. Si el número de elementos no es el mismo, por ejemplo la cola1 tiene más elementos que la cola2, entonces una vez sumada la parte común se copiará en la cola resultado el resto de elementos de la cola 1.
+Desarrollar un subprograma que reciba dos colas de enteros y devuelva una nueva cola con la suma de los elementos de las colas originales. Si el número de elementos no es el mismo, por ejemplo la cola1 tiene más elementos que la cola2, entonces una vez sumada la parte común se copiará en la cola resultado el resto de elementos de la cola1.
 
 ### Entradas
 - Dos colas de enteros. Las colas deben quedar en el mismo estado cuando el programa finalice.
@@ -271,10 +271,10 @@ Desarrollar un subprograma que reciba dos colas de enteros y devuelva una nueva 
 
 ### Ejemplos
 - (cola1: [1, 2, 3], cola2: [4, 5]) => [5, 7, 3]
-- (cola1: [1, 2], cola2: [4, 5, 6]) => [5, 7, 6]
+- (cola1: [1, 2], cola2: [10, 20, 30]) => [11, 22, 30]
 
 
-# Ejercicio 5: Resolver ejercicios básicos basados en recorrer la cola
+# Ejercicio 5: Ejercicios basados en recorrer la cola
 
 En este ejercicio, trabajaremos con operaciones básicas de colas, pero esta vez nos enfocaremos en resolver problemas específicos que requieren recorrer la cola. Para realizar este ejercicio se proporcionan los siguientes ficheros:
 
@@ -308,7 +308,7 @@ Desarrollar un subprograma que reciba una cola y un número entero y devuelva ve
 ## Ejercicio 5.2: Comprobar si un número está en la cola y devolver su posición
 
 ### Descripción
-A partir del subprograma anterior, desarrollar un nuevo subprograma que reciba una cola y un número entero y devuelva la posición del número en la cola. Devolver -1 si el número no está en la cola.
+A partir del subprograma anterior, desarrollar un nuevo subprograma que reciba una cola y un número entero y devuelva la posición del número en la cola, asumiendo que el elemento `first` hace la posición 1. Devolver -1 si el número no está en la cola.
 
 ### Entradas
 - Cola de enteros
@@ -318,9 +318,9 @@ A partir del subprograma anterior, desarrollar un nuevo subprograma que reciba u
 - Entero: Posición del número en la cola. Devolver -1 si el número no está en la cola. La posición de un elemento en la cola se cuenta desde 1.
 
 ### Ejemplos
-- (cola: [1, 2, 3, 4, 5], n: 3) => 3
-- (cola: [1, 2, 3, 4, 5], n: 1) => 1
-- (cola: [1, 2, 3, 4, 5], n: 6) => -1
+- (cola: [10, 20, 30, 40, 50], n: 30) => 3
+- (cola: [10, 20, 30, 40, 50], n: 10) => 1
+- (cola: [10, 20, 30, 40, 50], n: 6) => -1
 
 ## Ejercicio 5.3: Determinar si la cola está ordenada
 
@@ -342,7 +342,7 @@ Desarrollar un subprograma que reciba una cola de enteros y devuelva 1 si la col
 
 # Ejercicio 6: Eliminar elementos de la cola si se cumple una condición
 
-En este ejercicio, trabajaremos con operaciones básicas de colas, pero esta vez nos enfocaremos en resolver problemas específicos que requieren recorrer la cola. Para realizar este ejercicio se proporciona el siguiente fichero:
+En este ejercicio trabajaremos con operaciones básicas de colas, pero esta vez utilizaremos una cola que almacena información más compleja: una estructura de tipo `Cliente`. Para realizar este ejercicio se proporciona el siguiente fichero:
 
 - `uColaClientes.pas`
 - `uClientes.pas`
@@ -359,11 +359,11 @@ Un cliente puede ser definido como un registro con los siguientes campos: codigo
 
 Modifica todas las funciones y procedimientos que añadan o eliminen elementos de la cola para que se adapten a la nueva definición de la cola.
 
-Nota: existen múltiples formas de implementar esta modificación, en clases anteriores se planteo una posibilidad a partir de la unidad `TElemento`, pero no es la única forma de hacerlo. Si bien se podría hacer sin un registro, guardando directamente el código y el nombre en el nodo, recomendamos utilizar un registro para facilitar la comprensión del código.
+Nota: existen múltiples formas de implementar esta modificación. Si bien se podría hacer sin un registro, guardando directamente el código y el nombre en el nodo, recomendamos utilizar un registro para facilitar la comprensión del código.
 
 En este ejercicio estás tomando el rol de **desarrollador de la unidad**.
 
-Modifica el método toString para que muestre los clientes de la cola. 
+Modifica el método `toString` para que muestre la información completa de todos los clientes de la cola. 
 
 ## Ejercicio 6.2: Comprueba que la cola se han implementado correctamente
 
@@ -387,29 +387,28 @@ Observa el método `test_eliminar_clientes_inactivos` en el fichero `cola_ej6.pa
 
 # Ejercicio 7: Resolución de un problema con colas con tamaño dinámico
 
-Para este ejercicio, se proporciona un enunciado más complejo que requiere la implementación de una cola especializada. Para realizar este ejercicio no se proporcionan ficheros de código, por lo que deberás crearlos desde cero.
+Para este ejercicio, se proporciona un enunciado más complejo que requiere la implementación de una cola especializada. Para realizar este ejercicio no se proporcionan ficheros de código: deberás crearlos tú desde cero.
 
-1.	Implementa un TAD ColaTransaccionesBitcoin que implemente las 5 funcionalidades básicas de una Cola (enqueue, dequeue, is_empty, first, last) además de initialize utilizando como elemento base de la cola un registro de tipo TransaccionBitcoin, cuyos campos serán id_transaccion (un entero), fee (la comisión para el minero en Satoshis/byte, un entero positivo), direcciones origen y destino de la transacción (cada una un string de 50), prioridad (un entero entre 0 y 3) y valor transferido en bitcoins (un número real).
+1.	Implementa un TAD `ColaTransaccionesBitcoin` que implemente las 5 funcionalidades básicas de una Cola (`enqueue`, `dequeue`, `is_empty`, `first`, `last`) además de `initialize` utilizando como elemento base de la cola un registro de tipo `TransaccionBitcoin`, cuyos campos serán `id_transaccion` (un entero), `fee` (la comisión para el minero en Satoshis/byte, un entero positivo), direcciones `origen` y `destino` de la transacción (cada una un string de 50), `prioridad` (un entero entre 0 y 3) y `valor_transferido` en bitcoins (un número real).
 
 2.	Añade al TAD ColaTransaccionesBitcoin una función “modificar_prioridad” que tenga como argumentos una Cola de transacciones y dos valores de prioridad: p_nueva y p_vieja, de forma que modifique la prioridad de todas las transacciones que tengan valos p_vieja poniéndolos a prioridad p_nueva. Si no hay ninguna transacción con p_vieja la cola quedaría intacta.
 
-3.	Implementa ahora la misma función anterior, pero desde la perspectiva de un usuario de la cola, es decir, solo puedes utilizar las funciones básicas del TAD ColaTransaccionesBitcoin y lógicamente también modificar la prioridad de una transacción. 
+3.	Implementa ahora la misma función anterior, pero desde la perspectiva de un usuario de la cola, es decir, solo puedes utilizar las funciones básicas del TAD `ColaTransaccionesBitcoin` y lógicamente también modificar la prioridad de una transacción. 
 
-4.	Añade al TAD un subprograma EliminarTransferenciasDuplicadas que analice una cola y elimine posible transacciones duplicadas. Se sabrá que están duplicadas cuando la dirección origen y destino y el importe a transferir coincidan, a pesar de que la fee y el id_transacción podrían ser distintos. 
+4.	Añade al TAD un subprograma `EliminarTransferenciasDuplicadas` que analice una cola y elimine posible transacciones duplicadas. Se sabrá que están duplicadas cuando la dirección origen y destino y el importe a transferir coincidan, a pesar de que la `fee` y el `id_transacción` podrían ser distintos. 
 
-5.	Añade al TAD un subprograma que permita sacar de la cola todas las transacciones cuyo fee sea menor de un cierto importe en satoshis/byte que se pasa como parámetro.
+5.	Añade al TAD un subprograma que permita sacar de la cola todas las transacciones cuyo `fee` sea menor de un cierto importe en satoshis/byte que se pasa como parámetro.
 
 6.	Implementa el subprograma anterior desde la perspectiva de un usuario de la cola, lo que como sabes te obliga a utilizar únicamente las funciones básicas del TAD. 
 
 # Ejercicio 8: Resolución de un problema con colas con tamaño fijo (por medio de un array circular)
 
-Implementa una cola de Transferencias Bitcoin sobre un array circular de transferencias, con todas sus funcionalidades básicas más clear (vacía toda la cola) y is_full (indica si se ha llegado al límite de capacidad del array). Recuerda el funcionamiento de una cola con un array circular:
+Implementa una cola de Transferencias Bitcoin sobre un array circular de transferencias, con todas sus funcionalidades básicas más `clear` (vacía completamente la cola) e `is_full` (indica si se ha llegado al límite de capacidad del array). Recuerda el funcionamiento de una cola con un array circular:
 
 - La inserción es simple: avanzar el índice last a la siguiente posición y almacenar el dato: new_last = (last mod 10) + 1
 - La eliminación no reorganiza: simplemente se avanza first a la siguiente posición: new_first = (first mod 10) + 1
 - El array se diseña para continuar insertando en el hueco que queda entre first y last 
 - Para saber si la cola está vacía la implementación más sencilla es un entero elementos_en_cola: si cero -> vacía.
 - Cola llena: si elementos_en_cola es igual a la capacidad.
-
 
 ![Array Circular](imgs/array_circular.png)
