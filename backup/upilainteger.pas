@@ -1,11 +1,11 @@
 unit uPilaInteger;
 
-
+    
 interface
 
     uses
         sysutils;
-
+    
     type
         tNodo = record
             info: integer;
@@ -32,9 +32,9 @@ interface
     { Imprime los elementos de la pila }
     function toString(p: tPilaEnteros): string;
 
-
+    
 implementation
-
+    
 
     { Inicializa la pila }
     procedure initialize(var p: tPilaEnteros);
@@ -112,5 +112,5 @@ implementation
         toString := s; { Devuelve la cadena de texto }
     end;
 
-
+    
 end.

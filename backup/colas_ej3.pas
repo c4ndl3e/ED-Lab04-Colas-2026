@@ -30,11 +30,8 @@ uses
 procedure mostrar_inverso(c: tCola);
 var
     i: integer;
-    p: tPilaEnteros;
 begin
-    initialize(p)
-    while c.sig <> NIL do begin // Implementar aquí el código del ejercicio 3
-      push(p,c.first^.);
+    for i:= 1 to 5 do begin // Implementar aquí el código del ejercicio 3
 
     end;
 end;
@@ -44,6 +41,7 @@ var
 
 
 begin
+
     initialize_queue(c);
 
     enqueue(c, 1);
