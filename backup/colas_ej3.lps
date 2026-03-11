@@ -8,35 +8,31 @@
       <Unit>
         <Filename Value="colas_ej3.pas"/>
         <IsPartOfProject Value="True"/>
-        <TopLine Value="16"/>
-        <CursorPos X="23" Y="37"/>
-        <UsageCount Value="20"/>
-        <Loaded Value="True"/>
-      </Unit>
-      <Unit>
-        <Filename Value="uColaInteger.pas"/>
         <IsVisibleTab Value="True"/>
-        <EditorIndex Value="2"/>
-        <UsageCount Value="10"/>
+        <TopLine Value="19"/>
+        <CursorPos X="4" Y="31"/>
+        <UsageCount Value="21"/>
         <Loaded Value="True"/>
-      </Unit>
-      <Unit>
-        <Filename Value="uPilaInteger.pas"/>
-        <EditorIndex Value="-1"/>
-        <UsageCount Value="10"/>
       </Unit>
       <Unit>
         <Filename Value="upilainteger.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="uPilaInteger"/>
-        <EditorIndex Value="1"/>
-        <TopLine Value="10"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="13"/>
         <CursorPos X="6" Y="116"/>
-        <UsageCount Value="20"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="uColaInteger.pas"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="4"/>
+        <UsageCount Value="10"/>
         <Loaded Value="True"/>
       </Unit>
     </Units>
-    <JumpHistory HistoryIndex="6">
+    <JumpHistory HistoryIndex="12">
       <Position>
         <Filename Value="colas_ej3.pas"/>
         <Caret Line="56" Column="26" TopLine="33"/>
@@ -64,6 +60,30 @@
       <Position>
         <Filename Value="upilainteger.pas"/>
         <Caret Line="116" Column="6"/>
+      </Position>
+      <Position>
+        <Filename Value="colas_ej3.pas"/>
+        <Caret Line="35" Column="5" TopLine="18"/>
+      </Position>
+      <Position>
+        <Filename Value="colas_ej3.pas"/>
+        <Caret Line="52" Column="26" TopLine="32"/>
+      </Position>
+      <Position>
+        <Filename Value="colas_ej3.pas"/>
+        <Caret Line="34" Column="34" TopLine="19"/>
+      </Position>
+      <Position>
+        <Filename Value="colas_ej3.pas"/>
+        <Caret Line="37" Column="22" TopLine="22"/>
+      </Position>
+      <Position>
+        <Filename Value="colas_ej3.pas"/>
+        <Caret Line="39" Column="17" TopLine="24"/>
+      </Position>
+      <Position>
+        <Filename Value="colas_ej3.pas"/>
+        <Caret Line="40" Column="18" TopLine="24"/>
       </Position>
     </JumpHistory>
     <RunParams>

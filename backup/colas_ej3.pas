@@ -27,13 +27,18 @@ uses
         - (cola: [1, 2, 3, 4, 5]) => 5 4 3 2 1
 }
 
-procedure mostrar_inverso(c: tCola);
+procedure mostrar_inverso(c: tCola); {Complejidad temporal y espacial de orden O(n)}
 var
-    i: integer;
+    aux: tCola;
+    p: tPilaEnteros;
 begin
-    for i:= 1 to 5 do begin // Implementar aquí el código del ejercicio 3
-
-    end;
+  initialize(p);
+  copy(c,aux);
+  while not empty_queue(aux) do begin
+    push(p,first(aux));
+    dequeue(aux);
+  end;
+  writeln(uPilaInteger.toString(p));
 end;
 
 var
@@ -41,7 +46,6 @@ var
 
 
 begin
-
     initialize_queue(c);
 
     enqueue(c, 1);
@@ -51,14 +55,14 @@ begin
     enqueue(c, 5);
 
     WriteLn('Cola original:');
-    WriteLn(toString(c));
+    WriteLn(uColaInteger.toString(c));
 
     WriteLn;
     WriteLn('Mostrar inverso:');
     mostrar_inverso(c);
     WriteLn;
     WriteLn('Cola original:');
-    WriteLn(toString(c));
+    WriteLn(uColaInteger.toString(c));
 
     readln;
 end.

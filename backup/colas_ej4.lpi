@@ -8,9 +8,10 @@
         <MainUnitHasCreateFormStatements Value="False"/>
         <MainUnitHasTitleStatement Value="False"/>
         <MainUnitHasScaledStatement Value="False"/>
+        <UseDefaultCompilerOptions Value="True"/>
       </Flags>
       <SessionStorage Value="InProjectDir"/>
-      <Title Value="colas_ej3"/>
+      <Title Value="colas_ej4"/>
       <UseAppBundle Value="False"/>
       <ResourceType Value="res"/>
     </General>
@@ -26,13 +27,8 @@
     </RunParams>
     <Units>
       <Unit>
-        <Filename Value="colas_ej3.pas"/>
+        <Filename Value="colas_ej4.pas"/>
         <IsPartOfProject Value="True"/>
-      </Unit>
-      <Unit>
-        <Filename Value="upilainteger.pas"/>
-        <IsPartOfProject Value="True"/>
-        <UnitName Value="uPilaInteger"/>
       </Unit>
     </Units>
   </ProjectOptions>
@@ -40,7 +36,7 @@
     <Version Value="11"/>
     <PathDelim Value="\"/>
     <Target>
-      <Filename Value="colas_ej3"/>
+      <Filename Value="colas_ej4"/>
     </Target>
     <SearchPaths>
       <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
