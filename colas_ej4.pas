@@ -33,6 +33,7 @@ var
     suma: integer;
 
 begin
+    initialize_queue(c3);
     if (not empty_queue(c1)) and (not empty_queue(c2)) then begin
       copy(c1,aux1);
       copy(c2,aux2);
@@ -73,6 +74,8 @@ var
     suma: integer;
 
 begin
+    initialize_queue(c3);
+  if (not empty_queue(c1)) and (not empty_queue(c2)) then begin
     copy(c1,aux1);
     copy(c2,aux2);
     while (not empty_queue(aux1)) and (not empty_queue(aux2)) do begin
@@ -81,16 +84,21 @@ begin
         dequeue(aux1);
         dequeue(aux2);
     end;
-    if empty_queue(aux1) then
+    if (empty_queue(aux1)) and (not empty_queue(aux2)) then
         while not empty_queue(aux2) do begin
             enqueue(c3,first(aux2));
             dequeue(aux2);
         end
-    else
+    else if (empty_queue(aux2)) and (not empty_queue(aux1)) then
         while not empty_queue(aux1) do begin
             enqueue(c3,first(aux1));
             dequeue(aux1);
         end;
+  end
+  else if empty_queue(c1) then
+        c3:= c2
+    else
+        c3:= c1;
 end;
 
 

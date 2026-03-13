@@ -21,9 +21,9 @@ type
 
 procedure initialize_queue(var c: tCola);
 function empty_queue(c: tCola): boolean;
-function first(c: tCola): tCliente;
-function last(c: tCola): tCliente;
-procedure enqueue(var c: tCola; x: tCliente);
+function first(c: tCola): integer;
+function last(c: tCola): integer;
+procedure enqueue(var c: tCola; x: integer);
 procedure dequeue(var c: tCola);
 
 {  --- Operaciones adicionales de la cola --- }
